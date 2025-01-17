@@ -1,7 +1,11 @@
 from django.core.mail import send_mail
 
+from decouple import config
+
+HOST = config('HOST_FOR_SEND_MAIL')
+
 def send_activation_email(email, code):
-    activation_url = f'http://localhost:8000/api/account/activate/?u={code}'
+    activation_url = f'http://{HOST}/api/account/activate/?u={code}'
 
     send_mail(
         'Hello, activate your account',

@@ -7,3 +7,5 @@ celery
 redis
 drf_yasg
 django-filter
+faker
+factory-boy

@@ -75,7 +75,12 @@ DATABASES = {
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
-    }
+    },
+    "test": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": f"test_{config('DB_NAME')}",
+    },
+
 }
 
 AUTH_PASSWORD_VALIDATORS = [
